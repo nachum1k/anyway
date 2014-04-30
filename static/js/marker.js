@@ -21,7 +21,7 @@ var MarkerView = Backbone.View.extend({
 		});
 
 		this.$el.html($("#marker-content-template").html());
-
+		console.log("נחום1");
 		this.$el.width(400);
 		this.$el.find(".title").text(this.model.get("title"));
 		this.$el.find(".description").text(this.model.get("description"));
@@ -75,6 +75,7 @@ var MarkerView = Backbone.View.extend({
 			var image = "https://graph.facebook.com/" + follower + "/picture";
 			this.$followerList.append($("<img>").attr("src", image));
 		}
+		console.log("נחום2");
 	},
 	clickFollow : function() {
 		this.model.save({following: true}, {wait:true});
